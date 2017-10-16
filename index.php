@@ -6,6 +6,7 @@ phpinfo();
 // as defined in config.inc.php using the variable $default_view
 // If $default_room is defined in config.inc.php then this will
 // be used to redirect to a particular room.
+//ESSAI
 
 require_once "defaultincludes.inc";
 require_once "mrbs_sql.inc";
