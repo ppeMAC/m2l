@@ -1,5 +1,4 @@
 <?php
-phpinfo();
 // $Id: index.php 1640 2010-11-24 17:50:28Z jberanek $
 
 // Index is just a stub to redirect to the appropriate view
