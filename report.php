@@ -1041,7 +1041,14 @@ else // Assumed to be output_as_ical
   header("Content-Type: application/ics;  charset=" . get_charset(). "; name=\"" . $mail_settings['ics_filename'] . ".ics\"");
   header("Content-Disposition: attachment; filename=\"" . $mail_settings['ics_filename'] . ".ics\"");
 }
+?>
 
+
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
 
 if (isset($areamatch))
 {
@@ -1435,3 +1442,7 @@ if ($output_as_html || empty($nmatch))
   require_once "trailer.inc";
 }
 ?>
+</div>
+</div>
+</div>
+</div>

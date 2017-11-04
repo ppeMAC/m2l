@@ -166,16 +166,27 @@ function showAccessDenied($day, $month, $year, $area, $room)
   global $HTTP_REFERER;
 
   print_header($day, $month, $year, $area, isset($room) ? $room : "");
+
 ?>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+
   <h1><?php echo get_vocab("accessdenied")?></h1>
   <p>
    <?php echo get_vocab("norights")?>
   </p>
   <p>
+ 
     <a href="<?php echo htmlspecialchars($HTTP_REFERER); ?>">
       <?php echo get_vocab("returnprev"); ?>
     </a>
   </p>
+</div>
+</div>
+</div>
+</div>
 <?php
   // Print footer and exit
   print_footer(TRUE);

@@ -1,3 +1,6 @@
+
+        
+
 <?php
 
 // $Id: admin.php 1779 2011-01-30 10:06:06Z cimorrison $
@@ -38,7 +41,15 @@ $required_level = (isset($max_level) ? $max_level : 2);
 $is_admin = (authGetUserLevel($user) >= $required_level);
 
 print_header($day, $month, $year, isset($area) ? $area : "", isset($room) ? $room : "");
-
+?>
+<br/>
+<br/>
+<br/>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
 // Get the details we need for this area
 if (isset($area))
 {
@@ -450,3 +461,7 @@ if ($is_admin || ($n_displayable_areas > 0))
 
 require_once "trailer.inc"
 ?>
+</div>
+</div>
+</div>
+</div>

@@ -9,7 +9,14 @@ require_once "version.inc";
 checkAuthorised();
 
 print_header($day, $month, $year, $area, isset($room) ? $room : "");
+?>
 
+
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
 echo "<h3>" . get_vocab("about_mrbs") . "</h3>\n";
 echo "<table id=\"version_info\">\n";
 echo "<tr><td><a href=\"http://mrbs.sourceforge.net\">" . get_vocab("mrbs") . "</a>:</td><td>" . get_mrbs_version() . "</td></tr>\n";
@@ -38,3 +45,7 @@ require_once "site_faq" . $faqfilelang . ".html";
 
 require_once "trailer.inc";
 ?>
+</div>
+</div>
+</div>
+</div>

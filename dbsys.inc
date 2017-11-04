@@ -657,6 +657,10 @@ function db_get_userpass()
   global $PHP_SELF;
   print_header(0, 0, 0, 0, "");
   ?>
+   <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
   <form class="form_general" id="db_logon" method="post" action="<?php echo htmlspecialchars(basename($PHP_SELF)) ?>">
   <fieldset>
   <legend><?php echo get_vocab("database_login") ?></legend>
@@ -673,6 +677,10 @@ function db_get_userpass()
     </div>
   </fieldset>
   </form>
+</div>
+</div>
+</div>
+</div>
   <?php
   // Print footer and exit
   print_footer(TRUE);

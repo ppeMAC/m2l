@@ -39,6 +39,10 @@ print_header($day, $month, $year, $area, isset($room) ? $room : "");
 if (!empty($advanced))
 {
   ?>
+   <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
   <form class="form_general" id="search_form" method="get" action="search.php">
     <fieldset>
     <legend><?php echo get_vocab("advanced_search") ?></legend>
@@ -57,9 +61,16 @@ if (!empty($advanced))
       </div>
     </fieldset>
   </form>
+
   <?php
   require_once "trailer.inc";
   exit;
+  ?>
+  </div>
+</div>
+</div>
+</div>
+<?php
 }
 
 if (!$search_str)

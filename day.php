@@ -30,7 +30,14 @@ else
 
 // print the page header
 print_header($day, $month, $year, $area, isset($room) ? $room : "");
+?>
 
+
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
 $format = "Gi";
 if ( $enable_periods )
 {
@@ -470,3 +477,7 @@ else
 
 require_once "trailer.inc";
 ?>
+</div>
+</div>
+</div>
+</div>

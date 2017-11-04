@@ -35,7 +35,12 @@ $user = getUserName();
 
 // print the page header
 print_header($day, $month, $year, $area, isset($room) ? $room : "");
-
+?>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+   <?php
 
 // Note $room will be 0 if there are no rooms; this is checked for below.
 
@@ -577,3 +582,8 @@ show_colour_key();
 
 require_once "trailer.inc";
 ?>
+  </div>
+  </div>
+</div>
+</div>
+<?php

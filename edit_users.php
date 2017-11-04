@@ -57,6 +57,7 @@ $pwd_invalid = get_form_var('pwd_invalid', 'string');
 // validation, but unfortunately JavaScript's native support for Unicode
 // pattern matching is very limited.   Would need to be implemented using
 // an add-in library).
+
 function validate_password($password)
 {
   global $pwd_policy;
@@ -325,6 +326,12 @@ if (isset($Action) && ( ($Action == "Edit") or ($Action == "Add") ))
   }
 
   print_header(0, 0, 0, 0, "");
+  ?>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
   
   if ($initial_user_creation == 1)
   {
@@ -520,6 +527,10 @@ if (isset($Action) && ( ($Action == "Edit") or ($Action == "Add") ))
             echo "<p><em>(" . get_vocab("warning_last_admin") . ")</em></p>\n";
           }
           ?>
+        </div>
+      </div>
+    </div>
+    <div>
           <input type="hidden" name="Action" value="Update">    
           <input class="submit" type="submit" value="<?php echo(get_vocab("save")); ?>">
           
@@ -854,7 +865,12 @@ if (isset($Action) && ($Action == "Delete"))
 /* Print the standard MRBS header */
 
 print_header(0, 0, 0, "", "");
-
+?>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
 print "<h2>" . get_vocab("user_list") . "</h2>\n";
 
 if ($level >= $min_user_editing_level) /* Administrators get the right to add new users */
@@ -867,6 +883,7 @@ if ($level >= $min_user_editing_level) /* Administrators get the right to add ne
   print "  </div>\n";
   print "</form>\n";
 }
+
 
 if ($initial_user_creation != 1)   // don't print the user table if there are no users
 {
@@ -906,3 +923,7 @@ if ($initial_user_creation != 1)   // don't print the user table if there are no
 require_once "trailer.inc";
 
 ?>
+</div>
+</div>
+</div>
+</div>

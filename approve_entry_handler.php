@@ -42,8 +42,20 @@ if (isset($action))
   if ((($action == "approve") || ($action == "reject")) 
        && !auth_book_admin($user, $room_id))
   {
+    ?>
+ <div class="row">
+  <div class="col-lg-8 col-lg-offset-2 col-md-8 col-sm-12 col-xs-24">
+      <div class="panel panel-default">
+        <div class="panel-body">
+<?php
     showAccessDenied($day, $month, $year, $area, isset($room) ? $room : "");
     exit;
+    ?>
+  </div>
+</div>
+</div>
+</div>
+<?php
   }
   
   switch ($action)
